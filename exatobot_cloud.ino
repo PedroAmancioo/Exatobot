@@ -370,15 +370,16 @@ void loop() {
     Serial.println("parar");
   }
 
-  som();
+  //som();
   medirCor();
 
-  if(green < 100){
+  if(red > 70){
     i++;
-    if(i>=5){
+    if(i>=3){
       i=0;
-      esquerda();
-      delay(200);
+      direita();
+      delay(400);
+      Serial.println("ESQUERDAAAAAAAAAAAA SENSOR");
     }
   }
   
@@ -392,5 +393,5 @@ void loop() {
   //Serial.print("Distancia: ");
   //Serial.println(distance);
   
-  delay(100);
+  delay(10);
 } 
